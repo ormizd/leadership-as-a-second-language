@@ -16,8 +16,6 @@ Years later, I became a leadership coach, working mostly with people who had bee
 
 That's when it clicked. These new leaders weren't failing. They were translating. They were taking situations like a tense conversation, a struggling team member, or a decision with no clear answer, and running them through their first language, the language of expertise, where there's usually a right answer and you're the one who knows it. Leadership doesn't work that way. It has its own grammar, one of questions, trust, ambiguity, and influence over control.
 
-<!-- TODO before publishing: add one real, anonymized moment here (2–4 sentences). A client's words or a turning point you saw. Keep identifying details out. This comment is invisible on the site. -->
-
 Here's what language learning taught me that I wish every new leader knew: the awkwardness is not evidence that you don't belong. It's evidence that you're learning. Fluency doesn't arrive through information alone. It comes through immersion, practice, mistakes, and eventually a day when you realize you stopped translating.
 
 That's what this space is about. Leadership as a second language: how capable people learn to lead, and more quietly, how they become someone new along the way. Some posts will be short notes like this one. Some will be longer pieces about how our workplaces and institutions help or get in the way. Eventually there'll be conversations with people who have made the shift themselves.
