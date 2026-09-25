@@ -1,0 +1,7 @@
+[
+  { "said": "I'll just fix it myself.", "meant": "Walk me through how you'd approach it." },
+  { "said": "That's not how we do things here.", "meant": "Tell me what you're seeing that I'm not." },
+  { "said": "Here's what you should do.", "meant": "What have you already tried?" },
+  { "said": "I need to know the answer.", "meant": "I don't know yet. Let's find out together." },
+  { "said": "Why wasn't this done?", "meant": "What got in the way?" }
+]

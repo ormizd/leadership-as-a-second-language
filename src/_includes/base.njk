@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and title != site.title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ summary or site.description }}">
+  <meta property="og:title" content="{{ title or site.title }}">
+  <meta property="og:description" content="{{ summary or site.description }}">
+  <meta property="og:type" content="{% if kind %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <a class="wordmark" href="/">{{ site.title }}</a>
+    <nav aria-label="Main">
+      <a href="/#writing">Writing</a>
+      <a href="/about/">About</a>
+      <a href="#subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="colophon">
+    <section id="subscribe" class="subscribe">
+      <h2>Get new notes by email</h2>
+      <p>One short note a week. No spam, unsubscribe anytime.</p>
+      {% if site.buttondown %}
+      <form action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown }}" method="post">
+        <label for="bd-email">Email address</label>
+        <div class="field">
+          <input id="bd-email" type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+      {% else %}
+      <p class="muted">Email subscriptions are opening soon.</p>
+      {% endif %}
+    </section>
+    <p class="fine">Written by {{ site.author }} in Vancouver. Views are my own.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+---
+layout: base.njk
+title: Leadership as a Second Language
+---
+<section class="phrase" aria-labelledby="phrase-said">
+  <p class="said" id="phrase-said"><del>{{ phrases[0].said }}</del></p>
+  <p class="meant"><span class="meant-text">{{ phrases[0].meant }}</span></p>
+  <p class="gloss">Translated from Specialist into Leader. <button type="button" class="another" hidden>Another phrase</button></p>
+</section>
+
+<section class="intro">
+  <p>Most of us learn leadership the way adults learn a language: late, mid-conversation, and with an accent we can hear in ourselves. These are notes on becoming fluent in a new version of yourself, inside systems that weren't built for it.</p>
+  <p class="byline">By {{ site.author }}, a leadership coach who spent sixteen years teaching English as a second language.</p>
+</section>
+
+<section id="writing" class="writing" aria-labelledby="writing-title">
+  <h2 id="writing-title">Writing</h2>
+  {% if collections.writing.length %}
+  <ol class="entries">
+    {% for post in collections.writing %}
+    <li>
+      <a href="{{ post.url }}">
+        <span class="entry-kind">{{ post.data.kind }}{% if post.data.number %} {{ post.data.number }}{% endif %}</span>
+        <span class="entry-title">{{ post.data.title }}</span>
+        {% if post.data.summary %}<span class="entry-summary">{{ post.data.summary }}</span>{% endif %}
+        <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="muted">The first field note arrives soon.</p>
+  {% endif %}
+</section>
+
+<script>
+(function () {
+  var phrases = {{ phrases | dump | safe }};
+  var said = document.querySelector(".said del");
+  var meant = document.querySelector(".meant-text");
+  var box = document.querySelector(".phrase");
+  var btn = document.querySelector(".another");
+  if (!said || phrases.length < 2) return;
+  var i = 0;
+  btn.hidden = false;
+  btn.addEventListener("click", function () {
+    i = (i + 1) % phrases.length;
+    box.classList.remove("play");
+    said.textContent = phrases[i].said;
+    meant.textContent = phrases[i].meant;
+    void box.offsetWidth; // restart the animation
+    box.classList.add("play");
+  });
+  box.classList.add("play");
+})();
+</script>
