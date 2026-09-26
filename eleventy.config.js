@@ -10,9 +10,9 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString().slice(0, 10));
 
-  // All writing, newest first
+  // All writing, oldest first
   eleventyConfig.addCollection("writing", (api) =>
-    api.getFilteredByGlob("src/writing/*.md").sort((a, b) => b.date - a.date)
+    api.getFilteredByGlob("src/writing/*.md").sort((a, b) => a.date - b.date)
   );
 
   return { dir: { input: "src", output: "_site" } };
