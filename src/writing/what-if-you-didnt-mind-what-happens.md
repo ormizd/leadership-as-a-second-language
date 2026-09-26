@@ -3,10 +3,11 @@ title: What If You Didn't Mind What Happens?
 kind: Field Note
 number: 3
 date: 2026-09-26
-summary: A spiritual teacher's secret to staying calm, and what changes when leaders stop fighting what's already here.
+summary: J. Krishnamurti's secret to staying calm, and what changes when leaders stop fighting what's already here.
+
 ---
 
-I once heard a spiritual teacher describe why he was always so calm and composed. His answer was almost disappointingly simple: "My secret is I don't mind what happens."
+I once heard the philosopher and spiritual teacher J. Krishnamurti describe why he was always so calm and composed. His answer was almost disappointingly simple: "My secret is I don't mind what happens."
 
 That line stayed with me, and it keeps turning into a question I want to put to you: *What would you do differently if you didn't mind what happens?*
 
