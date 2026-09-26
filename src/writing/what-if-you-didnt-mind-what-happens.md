@@ -2,7 +2,7 @@
 title: What If You Didn't Mind What Happens?
 kind: Field Note
 number: 3
-date: 2026-10-08
+date: 2026-09-26
 summary: A spiritual teacher's secret to staying calm, and what changes when leaders stop fighting what's already here.
 ---
 
