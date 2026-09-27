@@ -17,7 +17,7 @@ This site is where I think out loud about that shift: how people become fluent i
 
 You'll find three kinds of writing here over time:
 
-- **Field Notes**, short weekly observations, each with one thing to try.
+- **Notes**, short weekly observations, each with one thing to try.
 - **Essays**, longer pieces on how organizations shape the people inside them.
 - **Conversations**, a podcast with people who have been through a real identity shift.
 
