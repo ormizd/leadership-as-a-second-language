@@ -1,6 +1,6 @@
 ---
 title: Why I Call It a Second Language
-kind: Field Note
+kind: Note
 number: 1
 date: 2026-09-24
 summary: Sixteen years of teaching English to adults taught me what new leaders are really going through. They aren't failing. They're translating.
