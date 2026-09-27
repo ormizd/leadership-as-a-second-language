@@ -11,11 +11,11 @@ Cloudflare rebuilds the site automatically about a minute after every change you
 5. Click **Commit changes**. The site updates in about a minute.
 
 `## ` makes a subheading. A line starting with `> **Try this week:**` becomes the exercise box.
-`kind` can be Field Note, Essay, or Conversation (only Field Notes need a number).
+`kind` can be Note, Essay, or Conversation (only Notes need a number).
 
 ## Publish a draft
 Open the file in `drafts/`, copy its text, create a new file in `src/writing/` with the same name, paste, set the date, and commit. Then delete the draft copy.
-`principles-create-gravity.md` is ready as Field Note 2.
+`principles-create-gravity.md` is ready as Note 2.
 
 ## Change site-wide settings (click the file, then the pencil icon)
 - `src/_data/site.json`: title, description, domain, Buttondown username (turns on the subscribe form).

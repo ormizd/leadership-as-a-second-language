@@ -1,6 +1,6 @@
 ---
 title: Your title here
-kind: Field Note
+kind: Note
 number: 3
 date: 2026-10-08
 summary: One sentence that appears under the title on the home page.

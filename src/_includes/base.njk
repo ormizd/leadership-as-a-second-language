@@ -20,6 +20,8 @@
   <header class="masthead">
     <a class="wordmark" href="/">{{ site.title }}</a>
     <nav aria-label="Main">
+      {% set firstPost = collections.writing | first %}
+      {% if firstPost %}<a href="{{ firstPost.url }}">Start here</a>{% endif %}
       <a href="/#writing">Writing</a>
       <a href="/about/">About</a>
       <a href="#subscribe">Subscribe</a>

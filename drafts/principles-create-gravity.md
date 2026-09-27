@@ -1,6 +1,6 @@
 ---
 title: Principles Create Gravity
-kind: Field Note
+kind: Note
 number: 2
 date: 2026-10-01
 summary: Why the leaders people want to follow are the ones they can predict, and how a few written principles get you there.

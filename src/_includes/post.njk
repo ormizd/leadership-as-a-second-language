@@ -10,4 +10,14 @@ layout: base.njk
   <div class="prose">
     {{ content | safe }}
   </div>
+
+  {% set prev = collections.writing | getPreviousCollectionItem %}
+  {% set next = collections.writing | getNextCollectionItem %}
+  {% if prev or next %}
+  <nav class="pager" aria-label="More writing">
+    {% if prev %}<a class="pager-prev" href="{{ prev.url }}"><span class="pager-label">← Previous</span><span class="pager-title">{{ prev.data.title }}</span></a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="pager-next" href="{{ next.url }}"><span class="pager-label">Next →</span><span class="pager-title">{{ next.data.title }}</span></a>{% endif %}
+  </nav>
+  {% endif %}
+  <p class="back"><a href="/#writing">All writing</a></p>
 </article>

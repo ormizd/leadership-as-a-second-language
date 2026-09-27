@@ -14,22 +14,41 @@ title: Leadership as a Second Language
 </section>
 
 <section id="writing" class="writing" aria-labelledby="writing-title">
-  <h2 id="writing-title">Writing</h2>
-  {% if collections.writing.length %}
-  <ol class="entries">
-    {% for post in collections.writing %}
-    <li>
+  {% set posts = collections.writing %}
+  {% if posts.length %}
+  {% set latest = posts | last %}
+  {% set first = posts | first %}
+  {% if posts.length > 1 %}
+  <a class="start-here" href="{{ first.url }}">
+    <span class="start-label">New here?</span>
+    <span>Start at the beginning with <strong>{{ first.data.kind }}{% if first.data.number %} {{ first.data.number }}{% endif %}: {{ first.data.title }}</strong> →</span>
+  </a>
+  {% endif %}
+  <h2 id="writing-title">Latest</h2>
+  <a class="featured" href="{{ latest.url }}">
+    <span class="entry-kind">{{ latest.data.kind }}{% if latest.data.number %} {{ latest.data.number }}{% endif %}</span>
+    <span class="featured-title">{{ latest.data.title }}</span>
+    {% if latest.data.summary %}<span class="entry-summary">{{ latest.data.summary }}</span>{% endif %}
+    <span class="featured-meta"><time datetime="{{ latest.date | isoDate }}">{{ latest.date | longDate }}</time><span class="read">Read the note →</span></span>
+  </a>
+
+  {% if posts.length > 1 %}
+  <h2 class="archive-title">All writing</h2>
+  <ol class="archive">
+    {% for post in posts %}
+    <li{% if post.url == latest.url %} class="is-latest"{% endif %}>
       <a href="{{ post.url }}">
-        <span class="entry-kind">{{ post.data.kind }}{% if post.data.number %} {{ post.data.number }}{% endif %}</span>
-        <span class="entry-title">{{ post.data.title }}</span>
-        {% if post.data.summary %}<span class="entry-summary">{{ post.data.summary }}</span>{% endif %}
-        <time datetime="{{ post.date | isoDate }}">{{ post.date | longDate }}</time>
+        <span class="archive-num">{% if post.data.number %}{{ post.data.number }}{% else %}{{ post.data.kind }}{% endif %}</span>
+        <span class="archive-title-text">{{ post.data.title }}</span>
+        {% if post.url == latest.url %}<span class="archive-new">New</span>{% endif %}
       </a>
     </li>
     {% endfor %}
   </ol>
+  {% endif %}
   {% else %}
-  <p class="muted">The first field note arrives soon.</p>
+  <h2 id="writing-title">Writing</h2>
+  <p class="muted">The first note arrives soon.</p>
   {% endif %}
 </section>
 
