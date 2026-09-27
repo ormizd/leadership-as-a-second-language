@@ -1,6 +1,6 @@
 ---
 title: What If You Didn't Mind What Happens?
-kind: Field Note
+kind: Note
 number: 3
 date: 2026-09-26
 summary: J. Krishnamurti's secret to staying calm, and what changes when leaders stop fighting what's already here.
