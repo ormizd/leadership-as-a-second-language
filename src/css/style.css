@@ -11,7 +11,7 @@
   --highlight: #F6E7A1;
 
   --serif: "Literata", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --measure: 36rem;
+  --measure: 56rem;
   color-scheme: light dark;
 }
 
@@ -49,22 +49,25 @@ a:hover { color: var(--pencil); }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: 0.5rem 0.75rem; }
 
-main, .masthead, .colophon {
+main, .colophon, .masthead > div {
   width: min(100% - 2.5rem, var(--measure));
   margin-inline: auto;
 }
 
 /* Masthead */
 .masthead {
+  background: var(--wash);
+}
+.masthead > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   gap: 0.5rem 1.5rem;
-  padding-block: 2rem 0;
+  padding-block: 2rem 2rem;
   font-size: 1rem;
 }
-.wordmark { font-weight: 600; text-decoration: none; letter-spacing: -0.005em; }
+.wordmark { font-style: italic; font-weight: 500; text-decoration: none; letter-spacing: -0.005em; }
 .masthead nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
 .masthead nav a { text-decoration: none; color: var(--muted); }
 .masthead nav a:hover { color: var(--pencil); }
